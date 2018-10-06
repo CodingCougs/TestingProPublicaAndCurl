@@ -1,3 +1,7 @@
+# Makefile for the sample API call program
+# It is necessary to link the curl library through CLI, so its a lot simpler
+# to just use this as a template in the future
+
 CXX = g++
 CXXFLAGS = -Wall -ggdb -std=c++11
 
@@ -10,5 +14,5 @@ main.o: main.cpp
 clean:
 	rm -f *.o
 
-# a.exe: hw04.o exceptions.o AVLTree.o
-# 	$(CXX) $(CXXFLAGS) -o a.exe hw04.o exceptions.o AVLTree.o
+a.exe: main.o
+	$(CXX) $(CXXFLAGS) -o a.exe main.o
